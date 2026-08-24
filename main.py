@@ -1,15 +1,8 @@
-from estate_manager.data_storage import save_data, load_data
+from estate_manager.data_storage import load_data
+from estate_manager.estate_tenants import show_all_members, register_new_member
 
-data = {
-    "memebers": [
-        {"name": "Ajala"}
-    ],
-    "payments": []
-}
 
-#save_data(data)
+data = load_data()
+register_new_member(data)
+show_all_members(data)
 
-print("Data saved")
-
-loaded_data = load_data()
-print(loaded_data)
