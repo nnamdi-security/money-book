@@ -4,5 +4,12 @@ data = {
     "memebers": [
         {"name": "Ajala"}
     ],
-    
+    "payments": []
 }
+
+#save_data(data)
+
+print("Data saved")
+
+loaded_data = load_data()
+print(loaded_data)
