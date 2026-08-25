@@ -7,10 +7,3 @@
 2026-08-25 00:59:59.318422 - Test event
 2026-08-25 01:01:14.619153 - Test event
 2026-08-25 01:01:35.823123 - Payment recorded: adigun paid 400 for month of july
-2026-08-25 06:48:36.662103 - Test event
-2026-08-25 06:48:51.702931 - Test event
-2026-08-25 06:53:29.113671 - Test event
-2026-08-25 06:54:03.574467 - Payment recorded: adigun paid 400 for month of January
-2026-08-25 07:43:06.076262 - Test event
-2026-08-25 07:43:13.563611 - Test event
-2026-08-25 07:43:51.416831 - Test event

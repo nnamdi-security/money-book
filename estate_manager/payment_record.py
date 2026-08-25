@@ -23,7 +23,7 @@ def record_payment(data):
 
     for payment in data["payments"]:
         if (
-            payment["name"].lower() == name.lower()
+            payment["member"].lower() == name.lower()
             and payment["month"].lower() == month.lower()
         ):
             print("A payment for this member and month already exists.")
@@ -43,39 +43,3 @@ def record_payment(data):
 
     logger(f"Payment recorded: {name} paid {amount} for month of {month}")
     print("Payment recorded successfully.")
-
-
-def show_payment_history(data):
-    if not data["members"]:
-        print("There are no registered members yet")
-        return
-
-    name = input("Enter the estate member's name here\t")
-
-    member_found = False
-
-    for member in data["members"]:
-        if member["name"].lower() == name.lower():
-            member_found = True
-            break
-
-    if not member_found:
-        print("The estate member you're looking for does not exist.")
-        return
-
-    print(f"\nPayment history for {name}")
-    print("-" * 35)
-
-    payment_found = False
-
-    for payment in data["payments"]:
-        if payment["name"].lower() == name.lower():
-            print(f"Month: {payment["month"]}")
-            print(f"Amount: {payment["amount"]}")
-            print("-" * 35)
-
-            payment_found = True
-
-    if not payment_found:
-        print("This estate member has no payment records.")
-    
