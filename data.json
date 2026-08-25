@@ -7,7 +7,17 @@
         {
             "name": "Olopa",
             "address": "21 aduramibga street"
+        },
+        {
+            "name": "Oluwatimileyin",
+            "address": "45 awosina street"
         }
     ],
-    "payments": []
+    "payments": [
+        {
+            "name": "Adigun",
+            "month": "July",
+            "amount": 400
+        }
+    ]
 }
