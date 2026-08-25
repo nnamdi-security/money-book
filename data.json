@@ -15,6 +15,10 @@
         {
             "name": "Peter",
             "address": "12, adigun street"
+        },
+        {
+            "name": "Oyinbo",
+            "address": "16, kokumo street"
         }
     ],
     "payments": [

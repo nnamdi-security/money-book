@@ -75,4 +75,62 @@ def show_payment_history(data):
             payment_found = True
 
     if not payment_found:
-        print("No payment history exist for this member of the estate")    
+        print("No payment history exist for this member of the estate")  
+
+
+def show_owing_members(data):
+    if not data["members"]:
+        print("There are no registered members.")
+        return
+
+    month = input("Enter month to check: ")
+
+    print(f"\nMembers owing for {month}")
+    print("-" * 30)
+
+    owing_found = False
+
+    for member in data["members"]:
+        paid = False
+
+        for payment in data["payments"]:
+            if (
+                payment["name"].lower() == member["name"].lower()
+                and payment["month"].lower() == month.lower()
+            ):
+                paid = True
+                break
+
+        if not paid:
+            print(member["name"])
+            owing_found = True
+
+    if not owing_found:
+        print("No members are owing.")
+       
+
+
+def show_up_to_date_members(data):
+    if not data["members"]:
+        print("There are no registered members.")
+        return
+
+    month = input("Enter month to check: ")
+
+    print(f"\nMembers up to date for {month}")
+    print("-" * 30)
+
+    up_to_date_found = False
+
+    for member in data["members"]:
+        for payment in data["payments"]:
+            if (
+                payment["name"].lower() == member["name"].lower()
+                and payment["month"].lower() == month.lower()
+            ):
+                print(member["name"])
+                up_to_date_found = True
+                break
+
+    if not up_to_date_found:
+        print("No members are up to date.")
