@@ -6,8 +6,8 @@ def register_new_member(data):
    address = input("Enter new member's address\t")
 
    member = {
-      "name": name.title,
-      "address": address.lower
+      "name": name.title(),
+      "address": address.lower()
    } 
 
    data["members"].append(member)

@@ -11,13 +11,22 @@
         {
             "name": "Oluwatimileyin",
             "address": "45 awosina street"
+        },
+        {
+            "name": "Peter",
+            "address": "12, adigun street"
         }
     ],
     "payments": [
         {
-            "name": "Adigun",
-            "month": "July",
-            "amount": 400
+            "name": "Peter",
+            "month": "May",
+            "amount": 399
+        },
+        {
+            "name": "Peter",
+            "month": "June",
+            "amount": 650
         }
     ]
 }
